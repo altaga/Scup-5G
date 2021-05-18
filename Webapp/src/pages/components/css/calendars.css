@@ -1,0 +1,43 @@
+.calendar__head--button{
+    width: 100%;
+}
+.icon-left-arrow{
+    height: 100%;
+}
+.icon-left-arrow{
+    width: 10%; height: auto;
+}
+.icon-right-arrow{
+    width: 10%; height: auto;
+}
+.calendar__head--button {
+    background-color: #2571ff; /* Green */
+    border: none;
+    border-radius:20px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+
+  .picker__container{
+    padding-right: 10%;
+  }
+
+  .calendar__head--title{
+      font-size: 2rem;
+      padding-left: 30%;
+  }
+.calendar__panel--today{
+    font-size: 2rem;
+    padding-left: 30%;
+}
+
+.calendar__panel--show{
+    display:none
+}
+

@@ -1,0 +1,57 @@
+.gradient-image{
+background-image: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,1)), url(../images/Logo512.png);
+background-size: 88%;
+background-repeat: no-repeat;
+color: white;
+padding: 15vw;
+}
+
+.image-mobile{
+    width: 100%;
+    }
+.text-mobile{
+    font-size: 2.3rem;;
+}
+
+.center {
+    position: absolute;
+    width: 40%;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+  .center-mob {
+    position: absolute;
+    width: 40%;
+    left: 50%;
+    top: 40%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  .lower-right
+{
+    margin-bottom: 1px;
+    margin-right : 1px;
+    bottom:0;
+    right:0;
+    width: 25%;
+    height: 40%;
+    color: green;
+    position: fixed;
+    bottom: 0;
+}
+
+.lower-right-mob
+{
+    margin-bottom: 1px;
+    margin-right : 1px;
+    bottom:0;
+    right:0;
+    width: 40%;
+    height: 30%;
+    color: green;
+    position: fixed;
+    bottom: 0;
+}

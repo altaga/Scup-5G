@@ -1,7 +1,10 @@
 # SCUP-WWAC
+
+# Table of contents:
  
 - [SCUP-WWAC](#scup-wwac)
-- [SCUP:](#scup)
+- [Table of contents:](#table-of-contents)
+- [Introduction:](#introduction)
 - [App UI:](#app-ui)
   - [**Login Screen**:](#login-screen)
   - [**Monitor Tab**:](#monitor-tab)
@@ -21,9 +24,11 @@
   - [**Simulator Tab**:](#simulator-tab)
       - [Functionality:](#functionality-7)
 
-# SCUP:
+# Introduction:
 
-Descripcion de que es scup y porque es util
+Smart telemedicine platform, based on IoT devices that provide Vital signs and historical values. This to transform the way telemedicine is provided and solve the biggest problem in relation to distance check-ups, which is taking biometrics. Our current version consists of an Oxygen Saturation Thimble, an ECG sensor and a contactless Thermometer that can send real time information to a Teams application. This allowing distance consultations and follow ups to become more seamless and to grab a real biometrics and vital signs while doing them.
+
+# App UI:
 
 La plataforma SCUP se diseño mediante la libreria de componentes profesionales de KendoReact utilizando gran variedad de los mismos para darle todas las funciones deseadas a nuestra aplicacion.
 
@@ -37,11 +42,9 @@ Para setear la licencia en react sigue la siguiente documentacion oficial.
 
 https://www.telerik.com/kendo-react-ui/getting-started/
 
-# App UI:
-
 En este caso la aplicacion es compatible con desktop y mobil.
 
-<h1>https://scup-wwac.s3.amazonaws.com/index.html</h1>
+https://scup-wwac.s3.amazonaws.com/index.html
 
 Login Credentials:
 

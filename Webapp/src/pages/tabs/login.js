@@ -10,13 +10,14 @@ import "../components/css/myindex.css"
 import { isMobile } from 'react-device-detect';
 
 import Index from "./index"
+import { Col, Row } from 'reactstrap';
 
 class Login extends Component {
     constructor(props) {
         super(props);
         this.state = {
             data: ["", ""],
-            logindisp:"inline"
+            logindisp: "inline"
         }
         this.handleChange = this.handleChange.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
@@ -25,7 +26,7 @@ class Login extends Component {
     handleSubmit(event) {
         if (this.state.data[0] === "drgregoryhouse@gmail.com" && this.state.data[1] === "toor") {
             this.setState({
-                logindisp:"none"
+                logindisp: "none"
             })
             ReactDOM.render(<Index />, document.getElementById('myindex'));
         }
@@ -43,9 +44,9 @@ class Login extends Component {
         if (isMobile) {
             return (
                 <div>
-                    <div id="mylogin" style={{display:this.state.logindisp}} >
+                    <div id="mylogin" style={{ display: this.state.logindisp }} >
                         <Card className="center-mob" style={{ width: "90%", backgroundColor: "#ffaea8" }}>
-                            <CardTitle className="text-center" style={{ fontSize: "1.3rem", color: "black" }}>SCUP Login Screen</CardTitle>
+                            <CardTitle className="text-center" style={{ fontSize: "1.3rem", color: "black" }}>SCUP Monitor</CardTitle>
                             <br />
                             <div className="mb-3">
                                 <Input
@@ -83,7 +84,22 @@ class Login extends Component {
                                 Login
                                 </Button>
                         </Card>
-                        <img alt="ninja" className="lower-right-mob" src={ninja} />
+                        <div>
+                        <Row md="2" className="lower-right">
+                        <Col xs="6">
+                        <div style={{ color: "black"}}>
+                            <div className="lower-right-text-mob">
+                            Made with:
+                            </div>
+                        </div>
+                        </Col>
+                        <Col xs="6">
+                        <a href="https://www.telerik.com/kendo-react-ui/" target="_blank" rel="noreferrer">
+                                <img className="ninja-style" alt="ninja" src={ninja} />
+                            </a>
+                        </Col>
+                        </Row>
+                        </div>
                     </div>
                     <div id="myindex" />
                 </div>
@@ -92,9 +108,9 @@ class Login extends Component {
         else {
             return (
                 <div>
-                    <div id="mylogin" style={{display:this.state.logindisp}} >
+                    <div id="mylogin" style={{ display: this.state.logindisp }} >
                         <Card className="center" style={{ width: "30%", backgroundColor: "#ffaea8" }}>
-                            <CardTitle className="text-center" style={{ fontSize: "1.3rem", color: "black" }}>SCUP Login Screen</CardTitle>
+                            <CardTitle className="text-center" style={{ fontSize: "1.3rem", color: "black" }}>SCUP Monitor</CardTitle>
                             <br />
                             <div className="mb-3">
                                 <Input
@@ -132,7 +148,20 @@ class Login extends Component {
                                 Login
                                 </Button>
                         </Card>
-                        <img alt="ninja" className="lower-right" src={ninja} />
+                        <Row md="2" className="lower-right">
+                        <Col xs="6">
+                        <div style={{ color: "black"}}>
+                            <div className="lower-right-text">
+                            Made with:
+                            </div>
+                        </div>
+                        </Col>
+                        <Col xs="6">
+                        <a href="https://www.telerik.com/kendo-react-ui/" target="_blank" rel="noreferrer">
+                                <img className="ninja-style" alt="ninja" src={ninja} />
+                            </a>
+                        </Col>
+                        </Row>
                     </div>
                     <div id="myindex" />
                 </div>

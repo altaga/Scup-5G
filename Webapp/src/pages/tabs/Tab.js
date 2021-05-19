@@ -158,7 +158,6 @@ class Tab extends React.Component {
   }
 
   toogleSI() {
-    console.log("ON")
     if (!this.state.SIEnable) {
       let arrayTemp = []
       if (this.state.weightlabel === "lb") {
@@ -285,7 +284,7 @@ class Tab extends React.Component {
       })
       .end(function (res) {
         if (res.error) throw new Error(res.error);
-        console.log(JSON.parse(JSON.parse(JSON.parse(res.raw_body))))
+
         _this.setState({
           sumMemory: JSON.parse(JSON.parse(JSON.parse(res.raw_body))),
           sumDat: JSON.parse(JSON.parse(JSON.parse(res.raw_body)))[0]
@@ -332,7 +331,7 @@ class Tab extends React.Component {
   }
 
   callBackIoT = (IoTData) => {
-    console.log(IoTData[0])
+
     var indata = ""
     var inserie = ""
     var inmemory = ""
@@ -341,8 +340,7 @@ class Tab extends React.Component {
     var i = ""
     let mytopics = ["/scup/ecg-1", "/scup/spo2-1", "/scup/temp-1"]
     if (IoTData[0] === mytopics[0]) {
-      console.log(JSON.stringify(this.state.memory1))
-      console.log(this.state.memory1.length)
+
       let temp = JSON.parse(IoTData[1])
       flag[0] = true
       var hr_array = temp.data
@@ -433,7 +431,7 @@ class Tab extends React.Component {
 
     }
     else if (IoTData[0] === mytopics[2]) {
-      console.log(IoTData[1])
+
       flag[2] = true
       const temp = JSON.parse(IoTData[1])
       if (parseInt(temp.pat) === parseInt(this.state.patient)) {

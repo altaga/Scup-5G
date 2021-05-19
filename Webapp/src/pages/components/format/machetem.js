@@ -73,7 +73,7 @@ class Machetem extends Component {
                 })
                 .end(function (res) {
                     if (res.error) throw new Error(res.error);
-                    console.log("Database Updated")
+
                     _this.props.callback(_this.props.value);
                 });
         }
@@ -83,7 +83,7 @@ class Machetem extends Component {
     }
 
     handleChange(event) {
-        console.log(event.value)
+
         switch (parseInt(event.nativeEvent.target.id)) {
             case 1:
                 this.setState({

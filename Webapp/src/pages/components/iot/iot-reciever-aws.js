@@ -100,7 +100,7 @@ class IotReciever extends Component {
             console.log('offline');
         });
         this.mqttClient.on('error', function (error) {
-            console.log('error', error);
+            //console.log('error', error);
         });
     }
 

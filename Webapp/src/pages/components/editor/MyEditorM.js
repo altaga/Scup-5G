@@ -1,5 +1,8 @@
 import * as React from "react";
 import { Editor, EditorTools } from "@progress/kendo-react-editor";
+import { instanceOf } from 'prop-types';
+import { withCookies, Cookies } from 'react-cookie';
+
 const {
     Bold,
     Italic,
@@ -37,9 +40,55 @@ const {
 } = EditorTools;
 
 class MyEditorM extends React.Component {
-    handlerChange(event){
-        console.log(event.value.content)
+
+    static propTypes = {
+        cookies: instanceOf(Cookies).isRequired
+      };
+      
+    constructor(props) {
+        super(props)
+        const { cookies } = this.props;
+        if(this.props.patient===0){
+            cookies.set(this.props.patient, "<p>NaN</p>", { path: '/' });
+        }
+        this.state = {
+            mydata1: cookies.get(this.props.patient),
+            patient:this.props.patient
+            }
+        this.handlerChange = this.handlerChange.bind(this);
     }
+
+    handlerChange(event){
+        if(this.props.patient!==0){
+            const { cookies } = this.props;
+            cookies.set(this.props.patient, event.html, { path: '/' });
+            this.setState({
+                mydata1:cookies.get(this.props.patient)
+            })
+        }        
+    }
+
+    componentDidUpdate(){
+        const { cookies } = this.props;
+        if(this.state.patient!==this.props.patient){
+            if(cookies.get(this.props.patient)===undefined)
+            {
+                cookies.set(this.props.patient, "<p></p>", { path: '/' });
+                this.setState({
+                    mydata1:"<p></p>",
+                    patient:this.props.patient
+                })
+            }
+            else{
+                this.setState({
+                    mydata1:cookies.get(this.props.patient),
+                    patient:this.props.patient
+                })
+            }
+            
+        }
+    }
+
     render() {
         return (
             <div>
@@ -65,7 +114,7 @@ class MyEditorM extends React.Component {
                     height: window.innerHeight / (2.4),
                     fontSize:"1rem"
                 }}
-                defaultContent={""}
+                value={this.state.mydata1}
                 onChange={this.handlerChange}
             />
             <div style={{marginBottom:"50px"}} />
@@ -73,4 +122,4 @@ class MyEditorM extends React.Component {
         );
     }
 }
-export default MyEditorM;
+export default withCookies(MyEditorM);

@@ -942,7 +942,7 @@ class Tab extends React.Component {
                         brpm={this.state.br}
                         callback={this.callbackbutton}
                       />}
-                      tab3={<MyEditor data={this.state.sumDats} patient={this.state.patient} />}
+                      tab3={<MyEditor patient={this.state.patient} />}
                       tab4={<Reports nreports={this.state.nreports} reports={this.state.reports} />}
                       tab5={
                         <Card>

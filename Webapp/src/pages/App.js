@@ -2,7 +2,7 @@
 // Licensed under the MIT License.
 
 import React from 'react';
-
+import { withCookies } from 'react-cookie';
 import './App.css';
 import '@progress/kendo-theme-default/dist/all.css';
 
@@ -30,4 +30,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default withCookies(App);

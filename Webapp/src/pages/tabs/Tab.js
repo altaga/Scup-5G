@@ -250,7 +250,6 @@ class Tab extends React.Component {
 
           _this.setState(
             {
-              bpm: Math.round(array[1]),
               ibi: array[3],
               sdnn: array[5],
               sdsd: array[7],

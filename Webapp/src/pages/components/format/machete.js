@@ -83,30 +83,31 @@ class Machete extends Component {
     }
 
     handleChange(event) {
-        switch (parseInt(event.target.id)) {
+        console.log(event.value)
+        switch (parseInt(event.nativeEvent.target.id)) {
             case 1:
                 this.setState({
-                    value1: event.target.value
+                    value1: event.value
                 })
                 break;
             case 2:
                 this.setState({
-                    value2: event.target.value
+                    value2: event.value
                 })
                 break;
             case 3:
                 this.setState({
-                    value3: event.target.value
+                    value3: event.value
                 })
                 break;
             case 4:
                 this.setState({
-                    value4: event.target.value
+                    value4: event.value
                 })
                 break;
             case 5:
                 this.setState({
-                    value5: event.target.value
+                    value5: event.value
                 })
                 break;
             default:

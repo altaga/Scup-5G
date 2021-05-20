@@ -1,5 +1,9 @@
 # SCUP-WWAC
 
+<p align="center">
+  <img src="./Images/logo.png" width="50%" >
+</p>
+
 # Table of contents:
  
 - [SCUP-WWAC](#scup-wwac)
@@ -79,13 +83,11 @@ Kendo Components:
 
 Desktop:
 
-<img src="./Images/mobile/monitor-mob.png" width="32%">
+<img src="./Images/desktop/monitor-desk.png">
 
 Mobile:
 
-<img src="./Images/mobile/monitor-mob.png" width="32%">
-<img src="./Images/mobile/monitor2-mob.png" width="32%">
-<img src="./Images/mobile/monitor3-mob.png" width="32%">
+<img src="./Images/mobile/monitor-mob.png" width="32%"><img src="./Images/mobile/monitor2-mob.png" width="32%"><img src="./Images/mobile/monitor3-mob.png" width="32%">
 
 ### Functionality:
 
@@ -245,8 +247,7 @@ Desktop:
 
 Mobile:
 
-<img src="./Images/mobile/historical1-mob.png" width="32%">
-<img src="./Images/mobile/historical-mob.png" width="32%">
+<img src="./Images/mobile/historical1-mob.png" width="32%"><img src="./Images/mobile/historical-mob.png" width="32%">
 
 ### Functionality:
 

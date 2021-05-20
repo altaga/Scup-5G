@@ -154,7 +154,6 @@ class Tab extends React.Component {
     this.callBackIoT = this.callBackIoT.bind(this);
     this.callbackbutton = this.callbackbutton.bind(this);
     this.callbackSumUpdate = this.callbackSumUpdate.bind(this);
-    this.uploadSummaryDataServer = this.uploadSummaryDataServer.bind(this);
   }
 
   toogleSI() {
@@ -470,6 +469,7 @@ class Tab extends React.Component {
   }
 
   callbackbutton(data) {
+    console.log(data)
     const temp = arrayContains(data, numbers)
     let _this = this
     if (temp === 0) {
@@ -505,6 +505,7 @@ class Tab extends React.Component {
               reports: []
             })
           }
+          alert("Report Sent")
         });
     }
   }
@@ -577,6 +578,7 @@ class Tab extends React.Component {
   }
 
   callbackSumUpdate(data) {
+    console.log(data)
     const temp = arrayContains(this.state.value, numbers)
     if (temp === 0) {
       // Nothing
@@ -590,6 +592,7 @@ class Tab extends React.Component {
       })
     }
   }
+
 
   uploadSummaryDataServer() {
     var unirest = require('unirest');
@@ -605,6 +608,7 @@ class Tab extends React.Component {
         alert("Data Submited")
       });
   }
+
 
   render() {
     if (isMobile) {
@@ -711,7 +715,7 @@ class Tab extends React.Component {
                       tab1={<Summ callback={this.callbackSumUpdate}
                         data={this.state.sumDat}
                         patient={this.state.patient}
-                        button={this.uploadSummaryDataServer}
+                        button={() => this.uploadSummaryDataServer()}
                       />}
                       tab2={<Machetem
                         numbers={numbers}

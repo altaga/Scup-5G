@@ -23,7 +23,7 @@ class Summ extends Component {
 
     handleChange(event) {
         let temp = this.state.mydata
-        temp[event.nativeEvent.target.id] = event.target.value
+        temp[event.nativeEvent.target.id] = event.value
         this.props.callback(temp)
     }
 
@@ -61,8 +61,9 @@ class Summ extends Component {
                     />
                 </Card>
                 <br />
+                
                 <div className="text-center" style={{ marginBottom: "-140px" }}>
-                    <Button style={{ fontSize: "1.5rem" }} onClick={() => this.props.button()} primary={true}>{blank(6)}Submit{blank(6)}</Button>
+                <input style={{ fontSize: "1.5rem" }} className="k-button k-primary" type="button" value="Submit" onClick={() => this.props.button()}></input>
                 </div>
             </div>
         );

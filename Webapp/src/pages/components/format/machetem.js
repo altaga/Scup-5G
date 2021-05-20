@@ -39,7 +39,7 @@ class Machetem extends Component {
 
     }
 
-    toCosmoDB() {
+    toDynamoDB() {
         const temp = arrayContains(this.props.value, this.props.numbers)
         if (this.state.value1 !== "" &&
             this.state.value2 !== "" &&
@@ -60,16 +60,16 @@ class Machetem extends Component {
             unirest('GET', 'https://98yl5ljnse.execute-api.us-east-1.amazonaws.com/PutPatientData')
                 .headers({
                     'database': 'Scup-Reports',
-                    'patient': this.props.value,
-                    'data': this.state.value1 +
-                        ',' + this.state.value2 +
-                        ',' + this.props.bpm +
-                        ',' + this.props.sat +
+                    'patient': _this.props.value,
+                    'data': _this.state.value1 +
+                        ',' + _this.state.value2 +
+                        ',' + _this.props.bpm +
+                        ',' + _this.props.sat +
                         ',' + temperature +
-                        ',' + this.props.brpm +
-                        ',' + this.state.value3 +
-                        ',' + this.state.value4 +
-                        ',' + this.state.value5
+                        ',' + _this.props.brpm +
+                        ',' + _this.state.value3 +
+                        ',' + _this.state.value4 +
+                        ',' + _this.state.value5
                 })
                 .end(function (res) {
                     if (res.error) throw new Error(res.error);
@@ -191,7 +191,7 @@ class Machetem extends Component {
                             <br />
                             <br />
                             <div className="text-center" style={{ marginBottom: "60px" }}>
-                                <Button style={{ fontSize: "2rem" }} onClick={() => this.toCosmoDB()} primary={true}>Submit</Button>
+                                <Button style={{ fontSize: "2rem" }} onClick={() => this.toDynamoDB()} primary={true}>Submit</Button>
                             </div>
                         </FormElement>
                     )}

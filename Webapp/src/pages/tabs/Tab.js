@@ -154,6 +154,7 @@ class Tab extends React.Component {
     this.callBackIoT = this.callBackIoT.bind(this);
     this.callbackbutton = this.callbackbutton.bind(this);
     this.callbackSumUpdate = this.callbackSumUpdate.bind(this);
+    this.uploadSummaryDataServer = this.uploadSummaryDataServer.bind(this)
   }
 
   toogleSI() {
@@ -510,6 +511,21 @@ class Tab extends React.Component {
     }
   }
 
+  uploadSummaryDataServer() {
+    var unirest = require('unirest');
+    unirest('POST', 'https://98yl5ljnse.execute-api.us-east-1.amazonaws.com/putS3')
+      .headers({
+        'bucket': 'scup-blankit',
+        'path': 'vars/summary.json',
+        'Content-Type': 'application/json'
+      })
+      .send(JSON.stringify(this.state.sumMemory))
+      .end(function (res) {
+        if (res.error) throw new Error(res.error);
+        alert("Data Submited")
+      });
+  }
+
   handleChange(event) {
     const temp = arrayContains(event.target.value, numbers)
     if (temp === 0) {
@@ -591,22 +607,6 @@ class Tab extends React.Component {
         sumDat: data
       })
     }
-  }
-
-
-  uploadSummaryDataServer() {
-    var unirest = require('unirest');
-    unirest('POST', 'https://98yl5ljnse.execute-api.us-east-1.amazonaws.com/putS3')
-      .headers({
-        'bucket': 'scup-blankit',
-        'path': 'vars/summary.json',
-        'Content-Type': 'application/json'
-      })
-      .send(JSON.stringify(this.state.sumMemory))
-      .end(function (res) {
-        if (res.error) throw new Error(res.error);
-        alert("Data Submited")
-      });
   }
 
 

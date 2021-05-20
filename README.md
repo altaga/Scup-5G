@@ -8,7 +8,7 @@
 - [App UI:](#app-ui)
   - [**Login Screen**:](#login-screen)
   - [**Monitor Tab**:](#monitor-tab)
-      - [Functionality:](#functionality)
+    - [Functionality:](#functionality)
   - [**Summary**:](#summary)
     - [Functionality:](#functionality-1)
   - [**Report**:](#report)
@@ -87,7 +87,7 @@ Mobile:
 <img src="./Images/mobile/monitor2-mob.png" width="32%">
 <img src="./Images/mobile/monitor3-mob.png" width="32%">
 
-#### Functionality:
+### Functionality:
 
 La plataforma se comunica con los devices IoT mediante MQTT, lo cual nos permite recibir los datos y graficarlos con la menor latencia posible.
 

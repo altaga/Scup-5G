@@ -259,6 +259,25 @@ To display the data we have to select the patient and then move on the calendar 
 
 This tab has the function of simulating the data in real time of a patient during a consultation, in order to use it, we will select a patient from the drop-down list and activate the sensors that we want to simulate, once the sensors that we want to simulate are in color, we will return to the monitor tab to be able to see the real-time data of the patient.
 
+To Test this application enter here first!:
+
+https://scup-wwac.s3.amazonaws.com/index.html
+
+With these login credentials:
+
+    Email:drgregoryhouse@gmail.com
+    Password:toor
+
+#### Functionality:
+
+You can follow the next video to use the application:
+
+Video: Click on the image
+[![DEMO](./Images/desktop/simul-desk.png)](https://youtu.be/hMcxbMPezFI)
+
+Or the following Instructions:
+
+
 Kendo Components: 
 
     import { Avatar, Card } from "@progress/kendo-react-layout";

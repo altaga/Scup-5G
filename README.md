@@ -291,9 +291,11 @@ Next, we go to the simulator tab. Select the patient we want to simulate and cli
 
 <img src="https://i.ibb.co/kBRzXhS/3.png">
 
-We will activate the 3 sensors to show how they arrive at the platform at the same time. To see this go back to the monitor tab.
+We will activate the 3 sensors to show how they arrive at the platform at the same time.
 
 <img src="https://i.ibb.co/ZhJgdwd/4.png">
+
+To see this go back to the monitor tab.
 
 <img src="https://i.ibb.co/1LfnjyF/5.png">
 
@@ -301,10 +303,11 @@ Then deactivate 2 of them to show that now only the temperature arrives!
 
 <img src="https://i.ibb.co/k6Qsgcm/7.png">
 
+Only Temp arrives!
+
 <img src="https://i.ibb.co/pzqPSjR/8.png">
 
-
-You can now check various combinations of this.
+You can now check and play with various combinations of this.
 
 
 ##### Kendo Components: 

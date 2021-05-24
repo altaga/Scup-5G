@@ -34,19 +34,19 @@ Smart telemedicine platform, based on IoT devices that provide Vital signs and h
 
 # App UI:
 
-La plataforma SCUP se diseño mediante la libreria de componentes profesionales de KendoReact utilizando gran variedad de los mismos para darle todas las funciones deseadas a nuestra aplicacion.
+The SCUP platform was designed using KendoReact's professional components library, using a wide variety of components to give our application all the desired functions.
 
 https://www.telerik.com/kendo-react-ui/
 
-Recuerda que estos componentes estan bajo licencia, para probarlos requieres registrarte para el free trial.
+Remember that these components are under license, to test them you need to register for the free trial.
 
 https://www.telerik.com/download-login-v2-kendo-react-ui
 
-Para setear la licencia en react sigue la siguiente documentacion oficial.
+To set the react license, follow the following official documentation.
 
 https://www.telerik.com/kendo-react-ui/getting-started/
 
-En este caso la aplicacion es compatible con desktop y mobil.
+In this case the application is compatible with desktop and mobile.
 
 https://scup-wwac.s3.amazonaws.com/index.html
 
@@ -91,27 +91,27 @@ Mobile:
 
 ### Functionality:
 
-La plataforma se comunica con los devices IoT mediante MQTT, lo cual nos permite recibir los datos y graficarlos con la menor latencia posible.
+The platform communicates with IoT devices through MQTT, which allows us to receive the data and graph it with the lowest possible latency.
 
-EKG: 
+ECG: 
 
-Los datos recibidos del monitor holter son procesados en tiempo real en la pagina mediante un filtro para poder ver correctamente la grafica del EKG correctamente.
+The data received from the holter monitor is processed in real time on the page through a filter to be able to see the EKG graph correctly.
 
 <img src="./Images/ecg.png">
 
-Sat:
+Oxygen Saturation:
 
-Los datos recibidos por el sensor de saturacion de oxigeno son:
+The data received by the oxygen saturation sensor are:
 
 - BPM.
-- SatO2 en sangre.
+- blood's SatO2.
 - Plethysmography Curve
 
 <img src="./Images/sat.png">
 
-Temp:
+Temperature:
 
-Este sensor toma la temperatura de la mano del paciente.
+This sensor takes the temperature of the patient's hand.
 
 <img src="https://i.stack.imgur.com/HK7op.gif" width="1000" />
 
@@ -119,19 +119,19 @@ To calculate the real temperature of the body, a multivariable linear regression
 
 <img src="https://i.ibb.co/Rgm108g/image.png" width="1000">
 
-El dato recibido por la plataforma es la temperatura central del cuerpo calculada.
+The data received by the platform is the calculated core body temperature.
 
 <img src="./Images/temp.png">
 
 Tab Explorer:
 
-Esta seccion nos sirve para poder navegar entre las 5 tabs de las que consta el monitor.
+This section helps us to navigate between the 5 tabs that the monitor consists of.
 
 <img src="./Images/explorer.png">
 
 Patient Data:
 
-En esta seccion podremos ver los datos del paciente, ademas de tener un conveniente boton para poder cambiar entre sistema ingles y sistema internacional para la temperatura.
+In this section we can see the patient's data, in addition to having a convenient button to switch between the English system and the international system for temperature.
 
 <img src="./Images/data.png">
 
@@ -153,7 +153,7 @@ Mobile:
 
 ### Functionality:
 
-En el summary podremos ver un resumen de los datos generales del paciente y manipularlos segun el medico lo crea conveniente, todos estos datos se modificaran permanentemente una vez se de clic en el boton de submit.  
+In the summary we can see a summary of the general data of the patient and manipulate them as the doctor sees fit, all these data will be permanently modified once the submit button is clicked.
 
 ## **Report**:
 
@@ -173,7 +173,7 @@ Mobile:
 
 ### Functionality:
 
-En esta seccion el medico podra llenar los datos obtenidos durante la consulta, los datos signos vitales se llenan de forma automatica mientras los datos son recibidos.
+In this section the doctor will be able to fill in the data obtained during the consultation, the vital signs data are filled in automatically while the data is received.
 
 ## **Additional notes**:
 
@@ -191,7 +191,7 @@ Mobile:
 
 ### Functionality:
 
-Todos los datos que no puedan ser agregados mediante el reporte pueden se llenadas en esta seccion, para poder agregar tablas, imagenes o cualquier tipo de dato adicional que se requiera.
+All the data that cannot be added through the report can be filled in this section, to be able to add tables, images or any type of additional data that is required.
 
 ## **Past Reports**:
 
@@ -210,7 +210,7 @@ Mobile:
 
 ### Functionality:
 
-Para poder revisar los reportes anteriores de algun paciente, una vez selecciones el paciente, aparecerean automaticamente las fechas de los reportes anteriores para que puedas desplegarlos.
+In order to review the previous reports of any patient, once you select the patient, the dates of the previous reports will automatically appear so that you can display them.
 
 ## **ECG Details**:
 
@@ -228,7 +228,7 @@ Mobile:
 
 ### Functionality:
 
-En el caso de los detalles del ECG, tendremos que estar recibiendo datos del ECG (puedes activar los datos del simulador), una vez recibamos almenos 10 - 15 segundos de datos, el simbolo del ECG se tornara de gris a rojo, esto significa que una vez los presiones, mandaremos los datos una API de analisis de ECG para obtener datos relevantes para un medico o medico/cardiologo.
+In the case of the ECG details, we will have to be receiving ECG data (you can activate the simulator data), once we receive at least 10 - 15 seconds of data, the ECG symbol will turn from gray to red, this means that Once the pressures are done, we will send the data to an ECG analysis API to obtain relevant data for a doctor or physician/cardiologist.
 
 ## **Historical Tab**:
 
@@ -251,11 +251,15 @@ Mobile:
 
 ### Functionality:
 
-Esta tab tiene como funcion desplegar los datos almacenados de los pacientes en sus consultas, los cuales se descargar de una base de datos que se actualiza segun el paciente va teniendo consultas.
+This tab has the function of displaying the stored data of the patients in their consultations, which is downloaded from a database that is updated as the patient has consultations.
 
-Para desplegar lo datos tenemos que seleccionar el paciente y posteriormente movernos en el calendario para poder revisar los datos del dia que necesitemos desplegar.
+To display the data we have to select the patient and then move on the calendar to review the data of the day that we need to display.
 
 ## **Simulator Tab**:
+
+This tab has the function of simulating the data in real time of a patient during a consultation, in order to use it, we will select a patient from the drop-down list and activate the sensors that we want to simulate, once the sensors that we want to simulate are in color, we will return to the monitor tab to be able to see the real-time data of the patient.
+
+#### Functionality:
 
 Kendo Components: 
 
@@ -271,6 +275,5 @@ Mobile:
 
 <img src="./Images/mobile/simulator-mob.png" width="32%">
 
-#### Functionality:
 
-Esta tab tiene como funcion simular los datos en tiempo real de un paciente durante una consulta, para poder utilizarlo, seleccionaremos un paciente de la lista desplegable y activaremos los sensores que querramos simular, una vez esten en color los sensores que querramos simular, volveremos a la tab de monitor para poder ver los datos en tiempo real del paciente.
+

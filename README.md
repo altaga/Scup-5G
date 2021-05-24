@@ -27,6 +27,7 @@
     - [Functionality:](#functionality-6)
   - [**Simulator Tab**:](#simulator-tab)
       - [Functionality:](#functionality-7)
+        - [Kendo Components:](#kendo-components)
 
 # Introduction:
 
@@ -275,7 +276,7 @@ With these login credentials:
 You can follow the next video to use the application:
 
 Video: Click on the image
-[![DEMO](https://gonextpage.com/wp-content/uploads/2017/07/click-here-button.png)](https://youtu.be/hMcxbMPezFI)
+[![DEMO](./Images/click-here-button.png)](https://youtu.be/hMcxbMPezFI)
 
 Or the following Instructions:
 

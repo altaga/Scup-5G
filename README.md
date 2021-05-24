@@ -257,6 +257,8 @@ To display the data we have to select the patient and then move on the calendar 
 
 ## **Simulator Tab**:
 
+As this project is based on IoT 
+
 This tab has the function of simulating the data in real time of a patient during a consultation, in order to use it, we will select a patient from the drop-down list and activate the sensors that we want to simulate, once the sensors that we want to simulate are in color, we will return to the monitor tab to be able to see the real-time data of the patient.
 
 To Test this application enter here first!:
@@ -277,8 +279,35 @@ Video: Click on the image
 
 Or the following Instructions:
 
+To test the simulator, we must log in to the page first:
 
-Kendo Components: 
+<img src="https://i.ibb.co/F6jrfcq/1.png">
+
+Then, we will select one of the patients, in this case Victor Altamirano. We can see that no data appears yet.
+
+<img src="https://i.ibb.co/ZxRvYpK/2.png">
+
+Next, we go to the simulator tab. Select the patient we want to simulate and click on the buttons on the right, this will simulate one of the sensors.
+
+<img src="https://i.ibb.co/kBRzXhS/3.png">
+
+We will activate the 3 sensors to show how they arrive at the platform at the same time. To see this go back to the monitor tab.
+
+<img src="https://i.ibb.co/ZhJgdwd/4.png">
+
+<img src="https://i.ibb.co/1LfnjyF/5.png">
+
+Then deactivate 2 of them to show that now only the temperature arrives!
+
+<img src="https://i.ibb.co/k6Qsgcm/7.png">
+
+<img src="https://i.ibb.co/pzqPSjR/8.png">
+
+
+You can now check various combinations of this.
+
+
+##### Kendo Components: 
 
     import { Avatar, Card } from "@progress/kendo-react-layout";
     import { Form, FormElement } from "@progress/kendo-react-form";
@@ -292,9 +321,4 @@ Mobile:
 
 <img src="./Images/mobile/simulator-mob.png" width="32%">
 
-#### Functionality:
 
-Para mostrar como utilizar el simulador hemos grabado un video demo.
-
-Video: Click on the image
-[![DEMO](./Images/desktop/simul-desk.png)](https://youtu.be/hMcxbMPezFI)

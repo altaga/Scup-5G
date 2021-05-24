@@ -259,8 +259,6 @@ To display the data we have to select the patient and then move on the calendar 
 
 This tab has the function of simulating the data in real time of a patient during a consultation, in order to use it, we will select a patient from the drop-down list and activate the sensors that we want to simulate, once the sensors that we want to simulate are in color, we will return to the monitor tab to be able to see the real-time data of the patient.
 
-#### Functionality:
-
 Kendo Components: 
 
     import { Avatar, Card } from "@progress/kendo-react-layout";
@@ -275,5 +273,9 @@ Mobile:
 
 <img src="./Images/mobile/simulator-mob.png" width="32%">
 
+#### Functionality:
 
+Para mostrar como utilizar el simulador hemos grabado un video demo.
 
+Video: Click on the image
+[![DEMO](./Images/logo.png)](https://youtu.be/hMcxbMPezFI)

@@ -273,7 +273,7 @@ With these login credentials:
 You can follow the next video to use the application:
 
 Video: Click on the image
-[![DEMO](./Images/desktop/simul-desk.png)](https://youtu.be/hMcxbMPezFI)
+[![DEMO](https://gonextpage.com/wp-content/uploads/2017/07/click-here-button.png)](https://youtu.be/hMcxbMPezFI)
 
 Or the following Instructions:
 

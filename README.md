@@ -278,4 +278,4 @@ Mobile:
 Para mostrar como utilizar el simulador hemos grabado un video demo.
 
 Video: Click on the image
-[![DEMO](./Images/logo.png)](https://youtu.be/hMcxbMPezFI)
+[![DEMO](./Images/desktop/simul-desk.png)](https://youtu.be/hMcxbMPezFI)

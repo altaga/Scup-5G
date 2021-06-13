@@ -10,6 +10,8 @@
 - [Table of contents:](#table-of-contents)
 - [Introduction:](#introduction)
 - [Connection Diagram:](#connection-diagram)
+  - [Server:](#server)
+  - [App Diagram:](#app-diagram)
 - [AWS Setup:](#aws-setup)
   - [Wavelength Zones:](#wavelength-zones)
   - [VPC:](#vpc)
@@ -41,7 +43,13 @@ Smart telemedicine platform, based on IoT devices that provide Vital signs and h
 
 # Connection Diagram:
 
+## Server:
+
 <img src="./Images/diagram.png">
+
+## App Diagram:
+
+<img src="./Images/Cloud/general.png">
 
 # AWS Setup:
 

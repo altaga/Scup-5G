@@ -25,6 +25,7 @@
   - [CodeBuild:](#codebuild)
   - [CodeDeploy:](#codedeploy)
   - [Review:](#review)
+  - [Check Deployment:](#check-deployment)
 - [App UI:](#app-ui)
   - [**Login Screen**:](#login-screen)
   - [**Monitor Tab**:](#monitor-tab)
@@ -62,6 +63,10 @@ https://docs.aws.amazon.com/wavelength/latest/developerguide/get-started-wavelen
 Debemos tener acceso a la zona wavelenght adecuada, por eso debemos de revisar que esta este activada como podemos ver en la imagen.
 
 <img src="./Images/Cloud/awswave.png">
+
+El test se va a realizar con la plataforma NOVA, en un celular conectado a la zona us-west-2-wl1-sfo-wlz-1
+
+<img src="./Images/Cloud/wavezone.png">
 
 ## VPC: 
 
@@ -192,7 +197,22 @@ Ya que todo funciono correctamente deberemos ver que el pipeline funciono correc
 
 <img src="./Images/Code/awsdeploy.png">
 
+## Check Deployment:
+
+CarrierIP:
+[155.146.24.214](http://155.146.24.214)
+
+Ahora podemos revisar que nuestra aplicacion esta correctamente desplegada al entrar dentro de un dispositivo con 5G gracias a plataforma de NOVA.
+
+<img src="./Images/Cloud/scupdeploy.png">
+
+Aqui podemos ver como la pagina no es accesible si no estamos conectados a una zona 5G de Verizon, en este caso la pc esta conectado a un internet local normal.
+
+<img src="./Images/Cloud/scupdeployfail.png">
+
 # App UI:
+
+La app para la prueba se revisara solo la version mobil ya que es el acceso que tenemos desde NOVA. Aunque la app es una PWA asi que puede funcionar en un escritorio conectado a una zona Wavelength tambien si quieren probarlo.
 
 ## **Login Screen**:
 

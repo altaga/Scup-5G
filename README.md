@@ -158,11 +158,7 @@ A su vez los detalles del deployment estan definidos en el archivo.
 
 [Code/appspec.yml](https://github.com/altaga/Scup-5G/blob/master/Code/appspec.yml)
 
-Un review de nuestro pipeline es:
-
-<img src="./Images/Code/5.png">
-
-Ya que todo funciono correctamente deberemos ver que el pipeline funciono correctamente.
+Ya que todo funciono correctamente deberemos ver que el pipeline asi.
 
 <img src="./Images/Code/awsdeploy.png">
 
@@ -184,6 +180,10 @@ Aqui podemos ver como la pagina no es accesible si no estamos conectados a una z
 Las pruebas se estan realizando en un celular. 
 
 [Samsung Galaxy S20+ 5G (SM-G986U)](https://www.samsung.com/us/business/products/mobile/phones/galaxy-s/galaxy-s20-plus-5g-512gb-unlocked-sm-g986uzkexaa/)
+
+Con una velocidad de 1246Mbps
+
+<img src="./Images/Cloud/speed.png" width="33%">
 
 La app para la prueba se revisara solo la version mobil ya que es el acceso que tenemos desde NOVA. Aunque la app es una PWA asi que puede funcionar en un escritorio conectado a una zona Wavelength tambien si quieren probarlo.
 

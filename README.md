@@ -212,6 +212,10 @@ Aqui podemos ver como la pagina no es accesible si no estamos conectados a una z
 
 # App UI:
 
+Las pruebas se estan realizando en un celular. 
+
+[Samsung Galaxy S20+ 5G (SM-G986U)](https://www.samsung.com/us/business/products/mobile/phones/galaxy-s/galaxy-s20-plus-5g-512gb-unlocked-sm-g986uzkexaa/)
+
 La app para la prueba se revisara solo la version mobil ya que es el acceso que tenemos desde NOVA. Aunque la app es una PWA asi que puede funcionar en un escritorio conectado a una zona Wavelength tambien si quieren probarlo.
 
 ## **Login Screen**:

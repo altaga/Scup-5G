@@ -22,7 +22,6 @@
 - [Code CI/CD:](#code-cicd)
   - [CodePipeline:](#codepipeline)
   - [Code Source:](#code-source)
-  - [CodeBuild:](#codebuild)
   - [CodeDeploy:](#codedeploy)
   - [Review:](#review)
   - [Check Deployment:](#check-deployment)
@@ -139,36 +138,6 @@ Selecciona a Github o el repositorio de codigo que prefieras como base.
 
 <img src="./Images/Code/2.png">
 
-## CodeBuild:
-
-Ya que yo utilice una instancia de Ubuntu las especificaciones del build que yo utilice fueron las siguientes.
-
-    # Do not change version. This is the version of aws buildspec, not the version of your buldspec file.
-    version: 0.2
-    phases:
-      pre_build:
-        commands:
-          #installs dependencies into the node_modules/ directory
-          - npm install
-      build:
-        commands:
-          - echo Build started on `date`
-          - echo Compiling
-          - npm run build
-      post_build:
-        commands:
-          - echo Build completed on `date`
-    # Include only the files required for your application to run.
-    artifacts:
-      files:
-        - public/**/*
-        - src/**/*
-        - package.json
-        - appspec.yml
-        - scripts/**/*
-
-<img src="./Images/Code/3.png">
-
 ## CodeDeploy:
 
 Al momento de configurar el deployment es muy imrpotante respetar las tags que utulizamos en la configuracion del EC2 para que la plataforma lo detecte correctamente.
@@ -181,13 +150,13 @@ Si todo funciono correctamente deberemos ver lo siguiente.
 
 ## Review:
 
-Dentro de la carpeta de code revisar a detalle los scripts que correra la maquina para hacer todo el despliegue.
+Dentro de la carpeta de code revisar a detalle los scripts que correra la maquina para hacer todo el despliegue, el despliegue se correra en el EC2 como un sevidor apache.
 
-Code/scripts
+[Code/scripts](https://github.com/altaga/Scup-5G/tree/master/Code/scripts)
 
 A su vez los detalles del deployment estan definidos en el archivo.
 
-Code/appspec.yml
+[Code/appspec.yml](https://github.com/altaga/Scup-5G/blob/master/Code/appspec.yml)
 
 Un review de nuestro pipeline es:
 

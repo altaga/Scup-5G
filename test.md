@@ -1,7 +1,7 @@
 - [**Test:**:](#test)
   - [With 5G Mobile:](#with-5g-mobile)
   - [Without 5G and Nova Platform Access:](#without-5g-and-nova-platform-access)
-  - [Witout 5G nor Nova Platform Access:](#witout-5g-nor-nova-platform-access)
+  - [Without 5G nor Nova Platform Access:](#witout-5g-nor-nova-platform-access)
   - [General Intructions:](#general-intructions)
 
 # **Test:**:

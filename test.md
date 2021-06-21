@@ -46,7 +46,7 @@ CarrierIP:
 
 <hr/>
 
-## Witout 5G nor Nova Platform Access:
+## Without 5G nor Nova Platform Access:
 
 Enter in the next link:
 

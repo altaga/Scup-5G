@@ -53,38 +53,38 @@ Smart telemedicine platform, based on IoT devices that provide Vital signs and h
 
 # AWS Setup:
 
-Para hacer funcionar la red de wavelength segui la siguiente documentacion de AWS, sin embargo mostrare algunos puntos importantes que hay que seguir para configurar correctamente todo.
+To make the wavelength network work we followed the following AWS documentation, however we will show some important points that must be followed to correctly configure everything.
 
 https://docs.aws.amazon.com/wavelength/latest/developerguide/get-started-wavelength.html
 
 ## Wavelength Zones:
 
-Debemos tener acceso a la zona wavelenght adecuada, por eso debemos de revisar que esta este activada como podemos ver en la imagen.
+We must have access to the appropriate wavelength zone, so check that it is activated as we can see in the image.
 
 <img src="./Images/Cloud/awswave.png">
 
-El test se va a realizar con la plataforma NOVA, en un celular conectado a la zona us-west-2-wl1-sfo-wlz-1
+The test will be carried out with the NOVA platform, on a cell phone connected to the zone: us-west-2-wl1-sfo-wlz-1
 
 <img src="./Images/Cloud/wavezone.png">
 
 ## VPC: 
 
-La configuracion de la VPC debe ser la siguiente para que pueda conectarse a la red Wavelength correctamente.
+The VPC settings must be as follows so that you can connect to the Wavelength network successfully.
 
 <img src="./Images/Cloud/awsvpc.png">
 
-Es importante que el IPv4 CIDR sea:
+It is very important for the IPv4 CIDR to be:
 10.0.0.0/24
 
 ## Gateway Carrier:
 
-En este paso lo importante sera seleccionar en la subnet la relgion correcta de AWS Wavelength.
+In this step, the important thing will be to select the correct AWS Wavelength region in the subnet.
 
 <img src="./Images/Cloud/awsvpc.png">
 
 ## EC2:
 
-La configuracion del EC2 es muy importante que se mantenga el los siguientes parametros:
+The configuration of the EC2 is very important that the following parameters are maintained:
 
 Instance type:
 
@@ -94,33 +94,33 @@ Instance type:
 
 Tags:
 
-Aunque es posible configurar configurar esto mas tarde, coloque los siguientes tags al final de la creacion de la instancia, estos serviran para realizar el despliegue de la app mas adelante.
+Although it is possible to configure this later, place the following tags at the end of the creation of the instance, these will serve to carry out the deployment of the app later.
 
 <img src="./Images/Cloud/awstags.png">
 
-Cualquier configuracion que desees realizar fuera de el tipo de instancia no hay ninguna restriccion.
+Whatever configuration you want to do outside of the instance type there are no restrictions.
 
 <img src="./Images/Cloud/awsec2.png">
 
-Para hacer el despliegue correcto de la aplicacion es importante que el IAM role de nuestra instancia tenga los siguientes permisos habilitados.
+To make the correct deployment of the application it is important that the IAM role of our instance has the following permissions enabled.
 
 <img src="./Images/Cloud/awsiam.png">
 
 ## Elastic IP:
 
-Una de las partes que puede dar mas problemas si no se realiza correctamente sera asignar el Elastic IP a nuestra instancia.
+One of the parts that can give more problems if it is not done correctly will be to assign the Elastic IP to our instance.
 
 <img src="./Images/Cloud/awselastic.png">
 
-Solo tenemos que darle clic en asignar como muestra el recuadro.
+We just have to click on assign as the box shows.
 
 <img src="./Images/Cloud/awsassign.png">
 
 ## Connection:
 
-Si todo lo que realizamos se hizo correctamente, deberemos de poder acceder a nuestra instancia desde la opcion que muestro a continuacion.
+If everything we did was done correctly, we should be able to access our instance from the option that I show below.
 
-Gracias a que utilizaremos un pipeline de despliegue de codigo es todo el acceso que necesitamos.
+Thanks to the fact that we will use a code deployment pipeline, it is all the access we need.
 
 <img src="./Images/Cloud/awsconnect.png">
 
@@ -128,37 +128,37 @@ Gracias a que utilizaremos un pipeline de despliegue de codigo es todo el acceso
 
 ## CodePipeline:
 
-En AWS CodePipeline crea un pipeline con las siguientes caracteristicas.
+In AWS CodePipeline create a pipeline with the following characteristics.
 
 <img src="./Images/Code/1.png">
 
 ## Code Source:
 
-Selecciona a Github o el repositorio de codigo que prefieras como base.
+Select Github or your preferred code repository as a base.
 
 <img src="./Images/Code/2.png">
 
 ## CodeDeploy:
 
-Al momento de configurar el deployment es muy imrpotante respetar las tags que utulizamos en la configuracion del EC2 para que la plataforma lo detecte correctamente.
+When configuring the deployment, it is very important to respect the tags that we use in the EC2 configuration so that the platform detects it correctly.
 
 <img src="./Images/Code/4-1.png">
 
-Si todo funciono correctamente deberemos ver lo siguiente.
+If everything worked correctly we should see the following.
 
 <img src="./Images/Code/4.png">
 
 ## Review:
 
-Dentro de la carpeta de code revisar a detalle los scripts que correra la maquina para hacer todo el despliegue, el despliegue se correra en el EC2 como un sevidor apache.
+Inside the code folder, check in detail the scripts that the machine will run to do all the deployment, the deployment will run on EC2 as an Apache server.
 
 [Code/scripts](https://github.com/altaga/Scup-5G/tree/master/Code/scripts)
 
-A su vez los detalles del deployment estan definidos en el archivo.
+In turn, the details of the deployment are defined in the file.
 
 [Code/appspec.yml](https://github.com/altaga/Scup-5G/blob/master/Code/appspec.yml)
 
-Ya que todo funciono correctamente deberemos ver que el pipeline asi.
+Since everything worked correctly we should see that the pipeline is like this.
 
 <img src="./Images/Code/awsdeploy.png">
 
@@ -167,29 +167,29 @@ Ya que todo funciono correctamente deberemos ver que el pipeline asi.
 CarrierIP:
 [155.146.24.214](http://155.146.24.214)
 
-Ahora podemos revisar que nuestra aplicacion esta correctamente desplegada al entrar dentro de un dispositivo con 5G gracias a plataforma de NOVA.
+Now we can check that our application is correctly deployed when entering a device with 5G thanks to the NOVA platform.
 
 <img src="./Images/Cloud/scupdeploy.png">
 
-Aqui podemos ver como la pagina no es accesible si no estamos conectados a una zona 5G de Verizon, en este caso la pc esta conectado a un internet local normal.
+Here we can see how the page is not accessible if we are not connected to a Verizon 5G zone, in this case the pc is connected to a normal local internet.
 
 <img src="./Images/Cloud/scupdeployfail.png">
 
 # App UI:
 
-Las pruebas se estan realizando en un celular. 
+The tests were being carried out on a cell phone.
 
 [Samsung Galaxy S20+ 5G (SM-G986U)](https://www.samsung.com/us/business/products/mobile/phones/galaxy-s/galaxy-s20-plus-5g-512gb-unlocked-sm-g986uzkexaa/)
 
-Con una velocidad de 1246Mbps
+With a speed of 1246Mbps
 
 <img src="./Images/Cloud/speed.png" width="33%">
 
-La app para la prueba se revisara solo la version mobil ya que es el acceso que tenemos desde NOVA. Aunque la app es una PWA asi que puede funcionar en un escritorio conectado a una zona Wavelength tambien si quieren probarlo.
+The app for the test will be reviewed only the mobile version since it is the access we have from NOVA. Although the app is a PWA so it can work on a desktop connected to a Wavelength zone too if you want to try it.
 
 ## **Login Screen**:
 
-La login screen da acceso a la plataforma poniendo las siuientes credenciales.
+The login screen gives access to the platform by entering the following credentials.
 
 Login Credentials:
 

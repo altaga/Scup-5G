@@ -7,7 +7,7 @@ This tab has the function of simulating the data in real time of a patient durin
 You can follow the next video to use the application:
 
 Video: Click on the image
-[![DEMO](./Images/click-here-button.png)](https://youtu.be/hMcxbMPezFI)
+[![DEMO](./Images/click-here-button.png)](https://www.youtube.com/watch?v=5sPgxL8JZDY)
 
 Or the following Instructions:
 
